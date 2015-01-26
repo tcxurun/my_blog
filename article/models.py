@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.core.urlresolvers import reverse
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length = 100)

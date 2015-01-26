@@ -67,15 +67,25 @@ WSGI_APPLICATION = 'my_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_blog',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True,
+        }
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-cn'
+
+FILE_CHARSET = 'utf-8'
+
+DEFAULT_CHARSET = 'utf-8'
 
 TIME_ZONE = 'UTC'
 
